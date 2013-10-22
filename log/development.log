@@ -1,0 +1,3439 @@
+  [1m[36m (189.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (144.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVoters (20131017090342)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "voters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "username" varchar(255), "password" varchar(255), "phone" varchar(255), "approved" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131017090342"]]
+  [1m[36m (159.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 12:06:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (uninitialized constant VoterController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__438178566__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.8ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (69.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 12:20:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 140ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 12:24:54 +0300
+
+ArgumentError ('Voter' is not a supported controller name. This can lead to potential routing problems. See http://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.2ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 12:25:19 +0300
+
+ArgumentError ('Voters' is not a supported controller name. This can lead to potential routing problems. See http://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 12:26:05 +0300
+Processing by VotersController#index as HTML
+  [1m[35mVoter Load (0.2ms)[0m  SELECT "voters".* FROM "voters"
+  Rendered voters/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 1457ms (Views: 1449.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 12:26:06 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 12:26:06 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 12:26:06 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 12:26:06 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 12:26:06 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 12:26:06 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 12:26:06 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 12:26:06 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 12:28:04 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (200.3ms)
+  Rendered voters/new.html.erb within layouts/application (210.4ms)
+Completed 200 OK in 220ms (Views: 217.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 12:39:36 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (66.4ms)
+  Rendered voters/new.html.erb within layouts/application (73.8ms)
+Completed 200 OK in 583ms (Views: 519.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 12:39:37 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 12:39:42 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 12:57:50 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 12:57:50 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 12:57:51 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 12:58:53 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 13:07:48 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 13:07:49 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 13:08:51 +0300
+
+
+Started GET "/new" for 127.0.0.1 at 2013-10-17 13:17:25 +0300
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.4ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.5ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (62.1ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 13:17:30 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 13:22:23 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 14:33:37 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:04:01 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (53.2ms)
+Completed 500 Internal Server Error in 62ms
+
+ActionView::Template::Error (undefined method `Link_to' for #<#<Class:0xa2e15a8>:0x99d4fc8>):
+    1: <h1>Welcome to chaguo Lako </h1>
+    2: <%= Link_to "Register", new_voter_path %>
+    3: <p>Register to have your opinion </p>
+  app/views/welcome/index.html.erb:2:in `_app_views_welcome_index_html_erb___565029825_80674690'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:04:26 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:04:31 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (13.0ms)
+  Rendered voters/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:04:31 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"Kevinbet@gmail.com", "username"=>"Kevo", "password"=>"[FILTERED]", "phone"=>"0723456543", "approved"=>"1"}, "commit"=>"Create Voter"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (91.5ms)[0m  [1mINSERT INTO "voters" ("approved", "created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["approved", true], ["created_at", Thu, 17 Oct 2013 12:05:28 UTC +00:00], ["email", "Kevinbet@gmail.com"], ["password", "kevo2013"], ["phone", "0723456543"], ["updated_at", Thu, 17 Oct 2013 12:05:28 UTC +00:00], ["username", "Kevo"]]
+  [1m[35m (152.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/voters/1
+Completed 302 Found in 268ms (ActiveRecord: 244.6ms)
+
+
+Started GET "/voters/1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoter Load (7.0ms)[0m  [1mSELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered voters/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 16.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:05:28 +0300
+
+
+Started GET "/voters" for 127.0.0.1 at 2013-10-17 15:05:40 +0300
+Processing by VotersController#index as HTML
+  [1m[35mVoter Load (0.3ms)[0m  SELECT "voters".* FROM "voters"
+  Rendered voters/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:05:40 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:05:44 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (6.7ms)
+  Rendered voters/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:05:44 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 15:06:30 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"fauzia", "username"=>"fauza", "password"=>"[FILTERED]", "phone"=>"5555", "approved"=>"0"}, "commit"=>"Create Voter"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "voters" ("approved", "created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["approved", false], ["created_at", Thu, 17 Oct 2013 12:06:30 UTC +00:00], ["email", "fauzia"], ["password", "6565"], ["phone", "5555"], ["updated_at", Thu, 17 Oct 2013 12:06:30 UTC +00:00], ["username", "fauza"]]
+  [1m[36m (173.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/voters/2
+Completed 302 Found in 187ms (ActiveRecord: 175.1ms)
+
+
+Started GET "/voters/2" for 127.0.0.1 at 2013-10-17 15:06:30 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mVoter Load (0.4ms)[0m  SELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered voters/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:06:30 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:06:30 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:06:31 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:06:31 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:06:31 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:06:31 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:06:31 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:06:31 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:06:31 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:06:31 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:06:31 +0300
+
+
+Started GET "/voters" for 127.0.0.1 at 2013-10-17 15:06:33 +0300
+Processing by VotersController#index as HTML
+  [1m[36mVoter Load (0.3ms)[0m  [1mSELECT "voters".* FROM "voters"[0m
+  Rendered voters/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:06:33 +0300
+
+
+Started GET "/voters" for 127.0.0.1 at 2013-10-17 15:12:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VotersController#index as HTML
+  [1m[35mVoter Load (0.2ms)[0m  SELECT "voters".* FROM "voters"
+  Rendered voters/index.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 265ms (Views: 202.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:12:49 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:12:50 +0300
+
+
+Started GET "/voters" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+Processing by VotersController#index as HTML
+  [1m[36mVoter Load (0.3ms)[0m  [1mSELECT "voters".* FROM "voters"[0m
+  Rendered voters/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:13:30 +0300
+
+
+Started GET "/voters" for 127.0.0.1 at 2013-10-17 15:13:33 +0300
+Processing by VotersController#index as HTML
+  [1m[35mVoter Load (0.3ms)[0m  SELECT "voters".* FROM "voters"
+  Rendered voters/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:13:33 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:13:33 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:13:34 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:13:34 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:34 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:34 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:34 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:34 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:34 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:13:34 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:13:34 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:13:56 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (70.5ms)
+  Rendered voters/new.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:13:56 +0300
+
+
+Started GET "/voters" for 127.0.0.1 at 2013-10-17 15:14:39 +0300
+Processing by VotersController#index as HTML
+  [1m[36mVoter Load (0.3ms)[0m  [1mSELECT "voters".* FROM "voters"[0m
+  Rendered voters/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:14:39 +0300
+
+
+Started GET "/voters/2" for 127.0.0.1 at 2013-10-17 15:15:32 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mVoter Load (0.4ms)[0m  SELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered voters/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 40ms (Views: 31.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:15:32 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:15:36 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:30:11 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+ERROR: compiling _app_views_layouts_application_html_erb___572473527_87588590 RAISED /home/justkevin/chagua/app/views/layouts/application.html.erb:11: syntax error, unexpected '=', expecting keyword_end
+<a href="'; = root_path;@output_buffer.safe_append='" class ="logo">
+             ^
+Function body:           def _app_views_layouts_application_html_erb___572473527_87588590(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<!DOCTYPE html>
+<html>
+<head>
+  <title>Chagua</title>
+  ';@output_buffer.append=( stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true );@output_buffer.safe_append='
+  ';@output_buffer.append=( javascript_include_tag "application", "data-turbolinks-track" => true );@output_buffer.safe_append='
+  ';@output_buffer.append=( csrf_meta_tags );@output_buffer.safe_append='
+</head>
+<body>
+<h1>Chaguo lako</h1>
+<a href="'; = root_path;@output_buffer.safe_append='" class ="logo">
+<img src="/assets/NDS.jpg"/>
+<hr/>
+';@output_buffer.append=( yield );@output_buffer.safe_append='
+
+</body>
+</html>
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `synchronize'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:403:in `_run__962122822__process_action__callbacks'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__9947942__call__callbacks'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (/home/justkevin/chagua/app/views/layouts/application.html.erb:11: syntax error, unexpected '=', expecting keyword_end
+<a href="'; = root_path;@output_buffer.safe_append='" class ="logo">
+             ^):
+     8: </head>
+     9: <body>
+    10: <h1>Chaguo lako</h1>
+    11: <a href="<% = root_path%>" class ="logo">
+    12: <img src="/assets/NDS.jpg"/>
+    13: <hr/>
+    14: <%= yield %>
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.0) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.0) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.0) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__962122822__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__9947942__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.2ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:31:15 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.1ms)
+ERROR: compiling _app_views_layouts_application_html_erb___572473527_81721570 RAISED /home/justkevin/chagua/app/views/layouts/application.html.erb:11: syntax error, unexpected '=', expecting keyword_end
+<a href= "'; = root_path ;@output_buffer.safe_append='" class ="logo">
+              ^
+Function body:           def _app_views_layouts_application_html_erb___572473527_81721570(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<!DOCTYPE html>
+<html>
+<head>
+  <title>Chagua</title>
+  ';@output_buffer.append=( stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true );@output_buffer.safe_append='
+  ';@output_buffer.append=( javascript_include_tag "application", "data-turbolinks-track" => true );@output_buffer.safe_append='
+  ';@output_buffer.append=( csrf_meta_tags );@output_buffer.safe_append='
+</head>
+<body>
+<h1>Chaguo lako</h1>
+<a href= "'; = root_path ;@output_buffer.safe_append='" class ="logo">
+<img src="/assets/NDS.jpg"/></a>
+<hr/>
+';@output_buffer.append=( yield );@output_buffer.safe_append='
+
+</body>
+</html>
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `synchronize'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:403:in `_run__962122822__process_action__callbacks'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__9947942__call__callbacks'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (/home/justkevin/chagua/app/views/layouts/application.html.erb:11: syntax error, unexpected '=', expecting keyword_end
+<a href= "'; = root_path ;@output_buffer.safe_append='" class ="logo">
+              ^):
+     8: </head>
+     9: <body>
+    10: <h1>Chaguo lako</h1>
+    11: <a href= "<% = root_path %>" class ="logo">
+    12: <img src="/assets/NDS.jpg"/></a>
+    13: <hr/>
+    14: <%= yield %>
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.0) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.0) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.0) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__962122822__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__9947942__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (74.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:31:36 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:31:43 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (11.8ms)
+  Rendered voters/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 27ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:31:43 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:31:45 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:31:45 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:31:48 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (11.0ms)
+  Rendered voters/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:31:49 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:31:53 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:31:53 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:32:25 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (6.2ms)
+  Rendered voters/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:32:25 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 15:33:00 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"Robyn", "username"=>"Bet", "password"=>"[FILTERED]", "phone"=>"+25479807665", "approved"=>"1"}, "commit"=>"Create Voter"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO "voters" ("approved", "created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["approved", true], ["created_at", Thu, 17 Oct 2013 12:33:00 UTC +00:00], ["email", "Robyn"], ["password", "you"], ["phone", "+25479807665"], ["updated_at", Thu, 17 Oct 2013 12:33:00 UTC +00:00], ["username", "Bet"]]
+  [1m[36m (212.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/voters/3
+Completed 302 Found in 244ms (ActiveRecord: 228.2ms)
+
+
+Started GET "/voters/3" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mVoter Load (0.3ms)[0m  SELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered voters/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:33:01 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:33:23 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:33:24 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:33:36 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (11.4ms)
+  Rendered voters/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:33:36 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 15:34:00 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"Kevinbet@gmail.com", "username"=>"kahaiu", "password"=>"[FILTERED]", "phone"=>"453", "approved"=>"1"}, "commit"=>"Create Voter"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "voters" ("approved", "created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["approved", true], ["created_at", Thu, 17 Oct 2013 12:34:00 UTC +00:00], ["email", "Kevinbet@gmail.com"], ["password", "jkkkkd"], ["phone", "453"], ["updated_at", Thu, 17 Oct 2013 12:34:00 UTC +00:00], ["username", "kahaiu"]]
+  [1m[36m (216.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/voters/4
+Completed 302 Found in 233ms (ActiveRecord: 219.1ms)
+
+
+Started GET "/voters/4" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mVoter Load (0.4ms)[0m  SELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered voters/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:34:01 +0300
+
+
+Started GET "/voters" for 127.0.0.1 at 2013-10-17 15:34:18 +0300
+Processing by VotersController#index as HTML
+  [1m[36mVoter Load (0.3ms)[0m  [1mSELECT "voters".* FROM "voters"[0m
+  Rendered voters/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:34:19 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:34:21 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (10.9ms)
+  Rendered voters/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:34:21 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 15:34:47 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"fauzia", "username"=>"faz", "password"=>"[FILTERED]", "phone"=>"987655", "approved"=>"0"}, "commit"=>"Create Voter"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.3ms)[0m  [1mINSERT INTO "voters" ("approved", "created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["approved", false], ["created_at", Thu, 17 Oct 2013 12:34:47 UTC +00:00], ["email", "fauzia"], ["password", "hgtyu"], ["phone", "987655"], ["updated_at", Thu, 17 Oct 2013 12:34:47 UTC +00:00], ["username", "faz"]]
+  [1m[35m (229.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/voters/5
+Completed 302 Found in 243ms (ActiveRecord: 233.7ms)
+
+
+Started GET "/voters/5" for 127.0.0.1 at 2013-10-17 15:34:47 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mVoter Load (0.2ms)[0m  [1mSELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered voters/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 85ms (Views: 80.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:34:47 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:34:47 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:34:47 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:34:48 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:48 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:48 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:48 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:48 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:48 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:34:48 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:34:48 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:35:01 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:35:01 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+
+Started GET "/asset%7CNDS.jpg" for 127.0.0.1 at 2013-10-17 15:39:33 +0300
+
+ActionController::RoutingError (No route matches [GET] "/asset%7CNDS.jpg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.4ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (84.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:40:58 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:40:58 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:40:58 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:40:58 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:40:58 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:40:58 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:40:59 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:40:59 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:40:59 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:40:59 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:40:59 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:40:59 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:44:52 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (63.7ms)
+Completed 200 OK in 125ms (Views: 123.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:44:52 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:44:53 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:47:36 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:47:36 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:47:36 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:47:36 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:47:36 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:47:36 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:47:36 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:47:36 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:47:36 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:47:37 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:47:37 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:47:37 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 108ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:49:11 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:52:06 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 112ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:52:07 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:53:35 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (12.3ms)
+  Rendered voters/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:53:35 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:53:37 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:53:37 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:54:03 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (10.3ms)
+  Rendered voters/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:54:03 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:54:29 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:54:29 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:54:48 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (10.2ms)
+  Rendered voters/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:54:48 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 15:55:47 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"kevinbet6", "username"=>"nijfo", "password"=>"[FILTERED]", "phone"=>"dhj", "approved"=>"0"}, "commit"=>"Create Voter"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "voters" ("approved", "created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["approved", false], ["created_at", Thu, 17 Oct 2013 12:55:47 UTC +00:00], ["email", "kevinbet6"], ["password", "hufefihjefe"], ["phone", "dhj"], ["updated_at", Thu, 17 Oct 2013 12:55:47 UTC +00:00], ["username", "nijfo"]]
+  [1m[35m (213.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/voters/6
+Completed 302 Found in 242ms (ActiveRecord: 214.5ms)
+
+
+Started GET "/voters/6" for 127.0.0.1 at 2013-10-17 15:55:47 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVoter Load (0.2ms)[0m  [1mSELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered voters/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:55:48 +0300
+
+
+Started GET "/voters/6/edit" for 127.0.0.1 at 2013-10-17 15:55:52 +0300
+Processing by VotersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mVoter Load (0.2ms)[0m  SELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered voters/_form.html.erb (9.5ms)
+  Rendered voters/edit.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:55:52 +0300
+
+
+Started PATCH "/voters/6" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+Processing by VotersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"kevinbet6", "username"=>"nijfo", "password"=>"[FILTERED]", "phone"=>"dhj", "approved"=>"0"}, "commit"=>"Update Voter", "id"=>"6"}
+  [1m[36mVoter Load (0.2ms)[0m  [1mSELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/voters/6
+Completed 302 Found in 24ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/voters/6" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mVoter Load (0.2ms)[0m  SELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered voters/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:55:55 +0300
+
+
+Started GET "/voters/6/edit" for 127.0.0.1 at 2013-10-17 15:56:06 +0300
+Processing by VotersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVoter Load (0.2ms)[0m  [1mSELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered voters/_form.html.erb (12.2ms)
+  Rendered voters/edit.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:56:06 +0300
+
+
+Started PATCH "/voters/6" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+Processing by VotersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"kevinbet6", "username"=>"nijfo", "password"=>"[FILTERED]", "phone"=>"dhj", "approved"=>"1"}, "commit"=>"Update Voter", "id"=>"6"}
+  [1m[35mVoter Load (0.2ms)[0m  SELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.2ms)[0m  UPDATE "voters" SET "approved" = ?, "updated_at" = ? WHERE "voters"."id" = 6  [["approved", true], ["updated_at", Thu, 17 Oct 2013 12:56:12 UTC +00:00]]
+  [1m[36m (191.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/voters/6
+Completed 302 Found in 211ms (ActiveRecord: 197.3ms)
+
+
+Started GET "/voters/6" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mVoter Load (0.2ms)[0m  SELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered voters/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:56:12 +0300
+
+
+Started GET "/voters" for 127.0.0.1 at 2013-10-17 15:56:17 +0300
+Processing by VotersController#index as HTML
+  [1m[36mVoter Load (0.3ms)[0m  [1mSELECT "voters".* FROM "voters"[0m
+  Rendered voters/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:56:18 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:56:25 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (11.0ms)
+  Rendered voters/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:56:25 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 15:56:27 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:56:27 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 15:56:35 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (11.6ms)
+  Rendered voters/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 15:56:35 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (25.9ms)
+  Rendered voters/new.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:00:24 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (51.7ms)
+  Rendered voters/new.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 77ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:19 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:01:20 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:01:39 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"hfrddsr", "username"=>"jgftr", "password"=>"[FILTERED]", "phone"=>"65544"}, "commit"=>"Create Voter"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "voters" ("created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 Oct 2013 13:01:39 UTC +00:00], ["email", "hfrddsr"], ["password", "jgff"], ["phone", "65544"], ["updated_at", Thu, 17 Oct 2013 13:01:39 UTC +00:00], ["username", "jgftr"]]
+  [1m[35m (191.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/voters/7
+Completed 302 Found in 206ms (ActiveRecord: 194.8ms)
+
+
+Started GET "/voters/7" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVoter Load (0.2ms)[0m  [1mSELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered voters/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:01:40 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:01:54 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:01:54 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:03:38 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (12.6ms)
+  Rendered voters/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:03:38 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"hdfed", "username"=>"uhssfc", "password"=>"[FILTERED]", "phone"=>"sfsf"}, "commit"=>"Create Voter"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "voters" ("created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 Oct 2013 13:03:58 UTC +00:00], ["email", "hdfed"], ["password", "sfssfd"], ["phone", "sfsf"], ["updated_at", Thu, 17 Oct 2013 13:03:58 UTC +00:00], ["username", "uhssfc"]]
+  [1m[35m (206.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/voters/8
+Completed 302 Found in 221ms (ActiveRecord: 209.5ms)
+
+
+Started GET "/voters/8" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mVoter Load (0.3ms)[0m  [1mSELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  Rendered voters/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:03:58 +0300
+
+
+Started GET "/voters" for 127.0.0.1 at 2013-10-17 16:04:06 +0300
+Processing by VotersController#index as HTML
+  [1m[35mVoter Load (0.4ms)[0m  SELECT "voters".* FROM "voters"
+  Rendered voters/index.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:04:06 +0300
+
+
+Started GET "/voters/6" for 127.0.0.1 at 2013-10-17 16:04:24 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVoter Load (0.2ms)[0m  [1mSELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered voters/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:04:25 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:04:32 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:04:32 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:04:36 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (10.8ms)
+  Rendered voters/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:04:36 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:04:38 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:04:38 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:09:29 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (57.3ms)
+  Rendered voters/new.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 74ms (Views: 67.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:09:29 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:09:40 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"uerudfhj", "username"=>"hfuibjf", "password"=>"[FILTERED]", "phone"=>"ihjgr"}, "commit"=>"Create Voter"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "voters" ("created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 Oct 2013 13:09:40 UTC +00:00], ["email", "uerudfhj"], ["password", "ife"], ["phone", "ihjgr"], ["updated_at", Thu, 17 Oct 2013 13:09:40 UTC +00:00], ["username", "hfuibjf"]]
+  [1m[35m (212.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/voters/9
+Completed 302 Found in 230ms (ActiveRecord: 214.0ms)
+
+
+Started GET "/voters/9" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mVoter Load (0.4ms)[0m  [1mSELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  Rendered voters/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 33ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:09:41 +0300
+
+
+Started GET "/voters/9" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+Processing by VotersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mVoter Load (0.4ms)[0m  SELECT "voters".* FROM "voters" WHERE "voters"."id" = ? LIMIT 1  [["id", "9"]]
+  Rendered voters/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 80ms (Views: 10.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:21 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:22 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:10:22 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:10:27 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:10:27 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:10:29 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (11.7ms)
+  Rendered voters/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:10:29 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:10:42 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"vghhh", "username"=>"nbvvfg", "password"=>"[FILTERED]", "phone"=>"jjklkkl"}, "commit"=>"Create Voter"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "voters" ("created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Thu, 17 Oct 2013 13:10:42 UTC +00:00], ["email", "vghhh"], ["password", "hhjj"], ["phone", "jjklkkl"], ["updated_at", Thu, 17 Oct 2013 13:10:42 UTC +00:00], ["username", "nbvvfg"]]
+  [1m[36m (233.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 254ms (ActiveRecord: 239.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:10:43 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:11:58 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:17:18 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:17:22 +0300
+
+SyntaxError (/home/justkevin/chagua/app/controllers/voters_controller.rb:31: syntax error, unexpected tIDENTIFIER, expecting '}'
+...: 'Thank  for registering.We'll get_in_touch.' }
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:31: syntax error, unexpected tSTRING_BEG, expecting '('
+...egistering.We'll get_in_touch.' }
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:32: syntax error, unexpected tIDENTIFIER, expecting '}'
+...mat.json { render action: 'show', status: :created, location...
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:34: syntax error, unexpected tIDENTIFIER, expecting '}'
+        format.html { render action: 'new' }
+                                         ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:45: syntax error, unexpected tCONSTANT, expecting '}'
+...irect_to @voter, notice: 'Voter was successfully updated.' }
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:45: syntax error, unexpected tSTRING_BEG, expecting '('
+...oter was successfully updated.' }
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:48: syntax error, unexpected tIDENTIFIER, expecting '}'
+        format.html { render action: 'edit' }
+                                          ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:48: unterminated string meets end of file
+/home/justkevin/chagua/app/controllers/voters_controller.rb:48: syntax error, unexpected end-of-input, expecting '}'):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__9947942__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.2ms)
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:17:22 +0300
+
+SyntaxError (/home/justkevin/chagua/app/controllers/voters_controller.rb:31: syntax error, unexpected tIDENTIFIER, expecting '}'
+...: 'Thank  for registering.We'll get_in_touch.' }
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:31: syntax error, unexpected tSTRING_BEG, expecting '('
+...egistering.We'll get_in_touch.' }
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:32: syntax error, unexpected tIDENTIFIER, expecting '}'
+...mat.json { render action: 'show', status: :created, location...
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:34: syntax error, unexpected tIDENTIFIER, expecting '}'
+        format.html { render action: 'new' }
+                                         ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:45: syntax error, unexpected tCONSTANT, expecting '}'
+...irect_to @voter, notice: 'Voter was successfully updated.' }
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:45: syntax error, unexpected tSTRING_BEG, expecting '('
+...oter was successfully updated.' }
+...                               ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:48: syntax error, unexpected tIDENTIFIER, expecting '}'
+        format.html { render action: 'edit' }
+                                          ^
+/home/justkevin/chagua/app/controllers/voters_controller.rb:48: unterminated string meets end of file
+/home/justkevin/chagua/app/controllers/voters_controller.rb:48: syntax error, unexpected end-of-input, expecting '}'):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__9947942__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.9ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:17:25 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:17:47 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (43.3ms)
+  Rendered voters/new.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 70ms (Views: 62.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:17:47 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"", "username"=>"", "password"=>"[FILTERED]", "phone"=>""}, "commit"=>"Create Voter"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "voters" ("created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 Oct 2013 13:17:50 UTC +00:00], ["email", ""], ["password", ""], ["phone", ""], ["updated_at", Thu, 17 Oct 2013 13:17:50 UTC +00:00], ["username", ""]]
+  [1m[35m (165.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 238ms (ActiveRecord: 171.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:17:50 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:18:31 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:18:34 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (73.0ms)
+  Rendered voters/new.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 94ms (Views: 83.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:18:34 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"", "username"=>"", "password"=>"[FILTERED]", "phone"=>""}, "commit"=>"Create Voter"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.2ms)[0m  INSERT INTO "voters" ("created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Thu, 17 Oct 2013 13:18:36 UTC +00:00], ["email", ""], ["password", ""], ["phone", ""], ["updated_at", Thu, 17 Oct 2013 13:18:36 UTC +00:00], ["username", ""]]
+  [1m[36m (183.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 206ms (ActiveRecord: 189.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:18:36 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:20:27 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (11.4ms)
+  Rendered voters/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:20:27 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:22:26 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (77.9ms)
+  Rendered voters/new.html.erb within layouts/application (79.4ms)
+Completed 200 OK in 110ms (Views: 99.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:22:27 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:22:29 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"", "username"=>"", "password"=>"[FILTERED]", "phone"=>""}, "commit"=>"Create Voter"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "voters" ("created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 Oct 2013 13:22:29 UTC +00:00], ["email", ""], ["password", ""], ["phone", ""], ["updated_at", Thu, 17 Oct 2013 13:22:29 UTC +00:00], ["username", ""]]
+  [1m[35m (154.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 174ms (ActiveRecord: 157.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:22:29 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:22:29 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:22:29 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:22:29 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:22:29 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:29 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:29 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:29 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:30 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:30 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:22:30 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:22:30 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:22:34 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (10.8ms)
+  Rendered voters/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:22:34 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:27:33 +0300
+
+SyntaxError (/home/justkevin/chagua/app/controllers/voters_controller.rb:33: syntax error, unexpected keyword_else, expecting '}'
+/home/justkevin/chagua/app/controllers/voters_controller.rb:36: syntax error, unexpected keyword_end, expecting '}'
+/home/justkevin/chagua/app/controllers/voters_controller.rb:74: syntax error, unexpected keyword_end, expecting '}'):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__9947942__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/justkevin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.4ms)
+  Rendered /home/justkevin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (71.2ms)
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:28:25 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"krnjvj", "username"=>"idfifj", "password"=>"[FILTERED]", "phone"=>"fifif"}, "commit"=>"Create Voter"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "voters" ("created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Thu, 17 Oct 2013 13:28:25 UTC +00:00], ["email", "krnjvj"], ["password", "difgovfi"], ["phone", "fifif"], ["updated_at", Thu, 17 Oct 2013 13:28:25 UTC +00:00], ["username", "idfifj"]]
+  [1m[36m (174.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 310ms (ActiveRecord: 178.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:28:26 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-17 16:28:34 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (7.3ms)
+  Rendered voters/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:28:35 +0300
+
+
+Started POST "/voters" for 127.0.0.1 at 2013-10-17 16:29:49 +0300
+Processing by VotersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Edk9c/fhGBrpUkLAywrdNZvLEKBbYyMWGZsn99UmHvo=", "voter"=>{"email"=>"ljyigfifj", "username"=>"kfo", "password"=>"[FILTERED]", "phone"=>"kffo"}, "commit"=>"Create Voter"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "voters" ("created_at", "email", "password", "phone", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 Oct 2013 13:29:49 UTC +00:00], ["email", "ljyigfifj"], ["password", "kfgo"], ["phone", "kffo"], ["updated_at", Thu, 17 Oct 2013 13:29:49 UTC +00:00], ["username", "kfo"]]
+  [1m[35m (151.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 230ms (ActiveRecord: 153.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:29:49 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:29:49 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:29:49 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:29:49 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:29:49 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:29:49 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:29:49 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:29:49 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:29:50 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:29:50 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:29:50 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:29:50 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:30:34 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-17 16:30:38 +0300
+  [1m[36mVoter Load (0.6ms)[0m  [1mSELECT "voters".* FROM "voters" ORDER BY "voters"."id" ASC LIMIT 1[0m
+  [1m[35mVoter Load (0.6ms)[0m  SELECT "voters".* FROM "voters" ORDER BY "voters"."id" DESC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "voters"[0m
+  [1m[35mVoter Load (0.5ms)[0m  SELECT "voters".* FROM "voters" ORDER BY "voters"."id" DESC LIMIT 1
+  [1m[36mVoter Load (0.6ms)[0m  [1mSELECT "voters".* FROM "voters" ORDER BY "voters"."id" DESC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAdmins (20131017140408)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131017140408"]]
+  [1m[36m (171.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAdmins (20131017143105)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "username" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "admins" already exists: CREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "username" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (164.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (144.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVoters (20131017090342)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "voters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "username" varchar(255), "password" varchar(255), "phone" varchar(255), "approved" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131017090342"]]
+  [1m[36m (147.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20131017143105)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "username" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131017143105"]]
+  [1m[36m (170.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (52.9ms)[0m  INSERT INTO "admins" ("created_at", "email", "password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 17 Oct 2013 14:35:10 UTC +00:00], ["email", "kevobet@gmail.com"], ["password", "1234"], ["updated_at", Thu, 17 Oct 2013 14:35:10 UTC +00:00], ["username", "kevo"]]
+  [1m[36m (345.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "admins" ("created_at", "email", "password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 Oct 2013 14:41:29 UTC +00:00], ["email", "kevinbet6@gmail.com"], ["password", "b1234"], ["updated_at", Thu, 17 Oct 2013 14:41:29 UTC +00:00], ["username", "kevinbet6"]]
+  [1m[35m (181.3ms)[0m  commit transaction
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-22 13:20:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1076ms (Views: 1027.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/voters.css?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/voters.js?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/assets/NDS.jpg" for 127.0.0.1 at 2013-10-22 13:20:24 +0300
+
+
+Started GET "/voters/new" for 127.0.0.1 at 2013-10-22 13:20:35 +0300
+Processing by VotersController#new as HTML
+  Rendered voters/_form.html.erb (90.0ms)
+  Rendered voters/new.html.erb within layouts/application (101.3ms)
+Completed 200 OK in 147ms (Views: 137.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-22 13:20:37 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
