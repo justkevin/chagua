@@ -1,4 +1,5 @@
 class VotesController < ApplicationController
+<<<<<<< HEAD
 	def index
 
 	end
@@ -19,4 +20,6 @@ class VotesController < ApplicationController
 		params.permit(:option_id, :voter_id)
 	end
 
+=======
+>>>>>>> 1314a6f8583dd83eb729293ffacfd5ac19b0455f
 end

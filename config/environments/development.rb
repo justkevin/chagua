@@ -34,8 +34,13 @@ Chagua::Application.configure do
     address:"smtp.gmail.com",
     port:587,
     domain:'gmail.com',
+<<<<<<< HEAD
     user_name:"kevinbet6@gmail.com",
     password:"27466546",
+=======
+    user_name:"robyne.kiplangat@gmail.com",
+    password:"amalegend",
+>>>>>>> 1314a6f8583dd83eb729293ffacfd5ac19b0455f
     authentication:"plain",
     enable_starttls_auto:true,
 

@@ -16,6 +16,7 @@
 </p>
 
 <p>
+<<<<<<< HEAD
   <strong>Created by:</strong>
   <%= @poll.admin.username %>
   
@@ -91,3 +92,26 @@
 <%= button_to 'Notify Voters Of New Poll..!', notify_users_path %>
 <% end %>
 
+=======
+  <strong>Admin:</strong>
+  <%= @poll.admin.username %>
+</p>
+
+<%= link_to 'Edit', edit_poll_path(@poll) %> |
+<%= link_to 'Back', polls_path %>
+<% @poll.options.each do |option| %>
+  <li><%= option.name %></li>
+  <%end%>
+  
+<h2>Options</h2>
+<ul>
+	
+</ul>
+<%=form_for ([@poll, @poll.options.build]) do |f| %>
+<%=f.label :name %>
+<%=f.text_field :name %>
+<%=f.submit %>
+<% end %>
+
+<%= button_to "notify voters", notify_users_path %>
+>>>>>>> 1314a6f8583dd83eb729293ffacfd5ac19b0455f

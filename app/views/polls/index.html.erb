@@ -21,8 +21,13 @@
         <td><%= poll.deadline.to_s(:simple) %></td>
         <td><%= poll.admin %></td>
         <td><%= link_to 'Show', poll %></td>
+<<<<<<< HEAD
          <% if admin_is_logged_in? %>
  
+=======
+       <% if admin_is_logged_in? %>
+
+>>>>>>> 1314a6f8583dd83eb729293ffacfd5ac19b0455f
         <td><%= link_to 'Edit', edit_poll_path(poll) %></td>
         <td><%= link_to 'Destroy', poll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
