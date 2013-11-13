@@ -1,13 +1,23 @@
 Chagua::Application.routes.draw do
+ resources :options
+
+  resources :polls do 
+  resources :options
+
+end
+  get "sessions/new"
   get "welcome/index"
   get "welcome/about"
-  resources :voters
-  root 'welcome#index'
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  post "notify_users" =>"polls#notify_users", :as =>"notify_users"
+  resources :voters, :sessions, :votes
+ 
+  match "/voters/:id/approve "=> "voters#approve",:as =>"voter_approve",via: [:post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

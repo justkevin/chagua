@@ -1,0 +1,9 @@
+<h1>Editing poll</h1>
+<% if admin_is_logged_in? %>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @poll %> |
+<%= link_to 'Back', polls_path %>
+
+ <% end %>
