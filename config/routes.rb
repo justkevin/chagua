@@ -2,14 +2,13 @@ Chagua::Application.routes.draw do
  resources :options
 
   resources :polls do 
-<<<<<<< HEAD
+
   resources :options do
     resources :votes
   end
-=======
+
   resources :options
 
->>>>>>> 1314a6f8583dd83eb729293ffacfd5ac19b0455f
 end
   get "sessions/new"
   get "welcome/index"
@@ -19,16 +18,12 @@ end
   resources :voters, :sessions, :votes
  
   match "/voters/:id/approve "=> "voters#approve",:as =>"voter_approve",via: [:post]
-<<<<<<< HEAD
- 
 
- 
-=======
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
->>>>>>> 1314a6f8583dd83eb729293ffacfd5ac19b0455f
+
   root 'welcome#index'
 
   # Example of regular route:
